@@ -98,6 +98,10 @@ body {
                 text-align: center;
                 padding-left: 0.25em;
                 padding-right: 0.25em;
+                &.handwritten-number {
+                    position: relative;
+                    top: -0.1em;
+                }
                 &.handwritten-number-1 {
                     @include transform(rotate(-1deg));
                 }
