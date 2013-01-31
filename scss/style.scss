@@ -95,7 +95,6 @@ body {
                 font-family: $font-family-cursive;
                 display: inline-block;
                 font-size: 0.8em;
-                line-height: 1.5em;
                 text-align: center;
                 padding-left: 0.25em;
                 padding-right: 0.25em;
@@ -121,43 +120,31 @@ body {
     position: absolute;
     &.tack-1 {
         @include transform(rotate(36deg));
-    }
-    &.tack-2 {
-        @include transform(rotate(86deg));
-    }
-    &.tack-3 {
-        @include transform(rotate(103deg));
-    }
-    &.tack-4 {
-        @include transform(rotate(120deg));
-    }
-    &.tack-5 {
-        @include transform(rotate(201deg));
-    }
-    &.tack-6 {
-        @include transform(rotate(223deg));
-    }
-    &.tack-1 {
         left: -0.1%;
         top: -3.1%;
     }
     &.tack-2 {
+        @include transform(rotate(86deg));
         right: -2.6%;
         top: -0.7%;
     }
     &.tack-3 {
+        @include transform(rotate(103deg));
         left: -2%;
         top: 47.9%;
     }
     &.tack-4 {
+        @include transform(rotate(120deg));
         right: -2.4%;
         top: 54.2%;
     }
     &.tack-5 {
+        @include transform(rotate(201deg));
         left: -3.6%;
         bottom: -1.1%;
     }
     &.tack-6 {
+        @include transform(rotate(223deg));
         right: -3.0%;
         bottom: -4.1%;
     }

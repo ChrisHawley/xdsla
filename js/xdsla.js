@@ -1,7 +1,7 @@
 $(function() {
 
     var last_accident = '01/29/2013'; //mm/dd/yyyy
-    var person = 'Drew'; //mm/dd/yyyy
+    var person = 'Dino'; //mm/dd/yyyy
     
     var days = days_between_today(last_accident);
     $('#js-number-of-days-current-number').text(days);
