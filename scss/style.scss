@@ -1,0 +1,216 @@
+/* import */
+
+@import "compass/reset";
+@import "compass/css3";
+
+/* variables */
+
+$black: #201f1e;
+$white: #fff;
+$dirty: #efefef;
+$green: #229260;
+$pink: #e06;
+$brass: #b5a642;
+
+$font-family-sans-serif: "Source Sans Pro", Arial, sans-serif;
+$font-family-cursive: "Merienda One", cursive;
+
+/* functions */
+
+/* blankety-blank */
+
+/* mixins */
+
+@mixin circle($i) {
+    height: $i;
+    width: $i;
+    line-height: $i;
+    @include border-radius($i * 0.5);
+}
+
+@mixin rgba-colour($colour, $alpha) {
+    color: $colour;
+    color: rgba($colour, $alpha);
+}
+
+/* style */
+
+* {
+    border-sizing: border-box;
+}
+
+html {
+    background: $pink;
+    color: $white;
+    font-family: $font-family-sans-serif;
+}
+
+body {
+    font-size: 62.5%;
+}
+
+.outer {
+    font-size: 1em;
+    width: 80%;
+    margin: 3em auto;
+    border: 3em solid $white;
+    background: $white;
+    @include transform(rotate(3deg));
+    @include box-shadow(0 0 2em $black);
+    position: relative;
+}
+
+.inner {
+    background: $green;
+    padding: 2em 3em;
+    @include border-radius(3em);
+}
+
+.bull {
+    &:before {
+        content:"\2022\00a0"; /* bull space */
+    }
+    &:after {
+        content:"\00a0\2022"; /* space bull */
+    }
+}
+
+.shout {
+    font-weight: 900;
+    text-transform: uppercase;
+    text-align: center;
+    display: block;
+    width: 100%;
+    .line {
+        display: block;
+        .space {
+            margin-top: 0.05em;
+            margin-bottom: 0.05em;
+            background: $dirty url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAYAAACp8Z5+AAAAHUlEQVQIW2OUk5PzefTo0RYGKGCEMTAEYCoxVAAASi0IBfJVuXQAAAAASUVORK5CYII=') repeat;
+            display: inline-block;
+            color: $black;
+            @include border-radius(0.25em);
+            .handwritten {
+                font-family: $font-family-cursive;
+                display: inline-block;
+                font-size: 0.8em;
+                line-height: 1.5em;
+                text-align: center;
+                padding-left: 0.25em;
+                padding-right: 0.25em;
+                &.handwritten-number-1 {
+                    @include transform(rotate(-1deg));
+                }
+                &.handwritten-number-2 {
+                    @include transform(rotate(2deg));
+                }
+                &.handwritten-name {
+                    @include transform(rotate(-2deg));
+                }
+            }
+        }
+    }
+}
+
+.tack {
+    background: $brass;
+    @include box-shadow(0 0 0.1em $black);
+    @include circle(3em);
+    display: block;
+    position: absolute;
+    &.tack-1 {
+        left: -0.1em;
+        top: -3.1em;
+        @include transform(rotate(36deg));
+    }
+    &.tack-2 {
+        right: -2.6em;
+        top: -0.7em;
+        @include transform(rotate(86deg));
+    }
+    &.tack-3 {
+        left: -2em;
+        top: 47.9%;
+        @include transform(rotate(103deg));
+    }
+    &.tack-4 {
+        right: -2.4em;
+        top: 54.2%;
+        @include transform(rotate(120deg));
+    }
+    &.tack-5 {
+        left: -3.6em;
+        bottom: -1.1em;
+        @include transform(rotate(201deg));
+    }
+    &.tack-6 {
+        right: -3.0em;
+        bottom: -4.1em;
+        @include transform(rotate(223deg));
+    }
+    &:before {
+        content: "\2605"; /* star */
+        color: darken($brass, 7%);
+        font-size: 3em;
+        display: inline-block;
+    }
+    &.tack-missing {
+        background: $black;
+        @include circle(0.5em);
+        &:before {
+            content: "";
+        }
+    }
+}
+
+hr {
+    $hr-size: 1em;
+    background: $white;
+    color: $white;
+    height: $hr-size;
+    width: 100%;
+    border: none;
+    &.big {
+        position: relative;
+        top: -14.5em;
+    }
+    &.small {
+        margin-top: 1 * $hr-size;
+        margin-bottom: 1 * $hr-size;
+    }
+}
+
+.legal {
+    @include transform(rotate(90deg));
+    @include apply-origin(100% 100%, 0);
+    position: absolute;
+    right: -1em;
+    bottom: 1em;
+    font-size: 1em;
+    text-transform: uppercase;
+    color: $black;
+    font-weight: 600;
+    a {
+        &:link,
+        &:visited {
+            color: $black;
+            text-decoration: underline;
+        }
+        &:focus,
+        &:hover,
+        &:active
+        {
+            color: $green;
+            text-decoration: underline;
+        }
+    }
+}
+
+/* @media screen and (min-width: 320px) and (max-width:480px) {
+    html {
+        background: lime;
+    }
+    .outer {
+        font-size: 0.5em;
+    }
+} */
