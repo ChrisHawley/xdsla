@@ -2,7 +2,7 @@
 <html lang="en">
     <head>
         <meta charset="utf-8" />
-        <title>xdsla - x days since last accident</title>
+        <title>xdsla - x days since last accident - by Ed Henderson</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
         <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:900,600' rel='stylesheet' type='text/css' />
         <link href="http://fonts.googleapis.com/css?family=Merienda+One" rel="stylesheet" type="text/css">
@@ -16,7 +16,7 @@
         <section class="inner">
             <h1 class="shout">
                 <div class="line">Engineering has worked</div>
-                <div class="line"><span class="space"><span id="js-number-of-days-current-number" class="handwritten handwritten-number-1">999</span></span> <span id="js-number-of-days-current-units" class="units">days</span></div>
+                <div class="line"><span class="space"><span id="js-number-of-days-current-number" class="handwritten handwritten-number-1">&nbsp;&nbsp;&nbsp;</span></span> <span id="js-number-of-days-current-units" class="units">days</span></div>
                 <div class="line">without a Git accident.</div>
             </h1>
             <hr>
@@ -26,23 +26,36 @@
             <hr">-->
             <h2 class="shout">
                 <div class="line">Current blame</div>
-                <div class="line">lies with <span class="space"><span class="handwritten handwritten-name">Drew</span></span></div>
+                <div class="line">lies with <span class="space"><span id="js-person-to-blame" class="handwritten handwritten-name">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></span>.</div>
             </h2>
             <hr>
             <h3 class="shout">
                 <div class="line bull">Do your part</div>
                 <div class="line">Help make a new record!</div>
             </h3>
-            <footer class="legal">
-                <p>xdsla is brought to you by <a href="http://edhenderson.com/">Ed Henderson</a>. Follow <a href="http://twitter.com/edhenderson">Ed</a> on Twitter.</p>
-            </footer>
         </section>
+        <footer class="legal">
+            <p>xdsla is brought to you by <a href="http://edhenderson.com/">Ed Henderson</a>.</p>
+            <p>Follow <a href="http://twitter.com/edhenderson">Ed</a> on Twitter.</p>
+        </footer>
         <small class="tack tack-1"></small>
         <small class="tack tack-2"></small>
         <small class="tack tack-3 tack-missing"></small>
         <small class="tack tack-4"></small>
         <small class="tack tack-5"></small>
         <small class="tack tack-6"></small>
-        TODO - GA
+        <script type="text/javascript">
+
+          var _gaq = _gaq || [];
+          _gaq.push(['_setAccount', 'UA-38124343-1']);
+          _gaq.push(['_trackPageview']);
+
+          (function() {
+            var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+          })();
+
+        </script>
     </body>
 </html>

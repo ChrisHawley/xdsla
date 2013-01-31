@@ -81,12 +81,13 @@ body {
     text-align: center;
     display: block;
     width: 100%;
+    font-size: 2em;
     .line {
         display: block;
         .space {
             margin-top: 0.05em;
             margin-bottom: 0.05em;
-            background: $dirty url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAYAAACp8Z5+AAAAHUlEQVQIW2OUk5PzefTo0RYGKGCEMTAEYCoxVAAASi0IBfJVuXQAAAAASUVORK5CYII=') repeat;
+            background-color: $dirty;
             display: inline-block;
             color: $black;
             @include border-radius(0.25em);
@@ -119,34 +120,46 @@ body {
     display: block;
     position: absolute;
     &.tack-1 {
-        left: -0.1em;
-        top: -3.1em;
         @include transform(rotate(36deg));
     }
     &.tack-2 {
-        right: -2.6em;
-        top: -0.7em;
         @include transform(rotate(86deg));
     }
     &.tack-3 {
-        left: -2em;
-        top: 47.9%;
         @include transform(rotate(103deg));
     }
     &.tack-4 {
-        right: -2.4em;
-        top: 54.2%;
         @include transform(rotate(120deg));
     }
     &.tack-5 {
-        left: -3.6em;
-        bottom: -1.1em;
         @include transform(rotate(201deg));
     }
     &.tack-6 {
-        right: -3.0em;
-        bottom: -4.1em;
         @include transform(rotate(223deg));
+    }
+    &.tack-1 {
+        left: -0.1%;
+        top: -3.1%;
+    }
+    &.tack-2 {
+        right: -2.6%;
+        top: -0.7%;
+    }
+    &.tack-3 {
+        left: -2%;
+        top: 47.9%;
+    }
+    &.tack-4 {
+        right: -2.4%;
+        top: 54.2%;
+    }
+    &.tack-5 {
+        left: -3.6%;
+        bottom: -1.1%;
+    }
+    &.tack-6 {
+        right: -3.0%;
+        bottom: -4.1%;
     }
     &:before {
         content: "\2605"; /* star */
@@ -170,14 +183,8 @@ hr {
     height: $hr-size;
     width: 100%;
     border: none;
-    &.big {
-        position: relative;
-        top: -14.5em;
-    }
-    &.small {
-        margin-top: 1 * $hr-size;
-        margin-bottom: 1 * $hr-size;
-    }
+    margin-top: 1 * $hr-size;
+    margin-bottom: 1 * $hr-size;
 }
 
 .legal {
@@ -186,10 +193,13 @@ hr {
     position: absolute;
     right: -1em;
     bottom: 1em;
-    font-size: 1em;
+    font-size: 0.8em;
     text-transform: uppercase;
     color: $black;
     font-weight: 600;
+    p {
+        display: inline;
+    }
     a {
         &:link,
         &:visited {
@@ -206,11 +216,72 @@ hr {
     }
 }
 
-/* @media screen and (min-width: 320px) and (max-width:480px) {
-    html {
-        background: lime;
-    }
+@media screen and (min-width: 320px) and (max-width:480px) {
     .outer {
-        font-size: 0.5em;
+        margin: 1em auto;
+        border: 1em solid $white;
+        @include box-shadow(0 0 0.5em $black);
+        @include transform(rotate(2deg));
     }
-} */
+    .inner {
+        background: $green;
+        padding: 0.5em 0.75em;
+        @include border-radius(1em);
+    }
+    .shout {
+        .line {
+            .space {
+                @include border-radius(0.1em);
+            }
+        }
+    }
+    .tack {
+        @include circle(1em);
+        @include box-shadow(0 0 0.01em $black);
+        &:before {
+            font-size: 1em;
+        }
+        &.tack-missing {
+            @include circle(0.15em);
+        }
+    }
+    hr {
+        $hr-size: 0.33em;
+        height: $hr-size;
+        margin-top: 1 * $hr-size;
+        margin-bottom: 1 * $hr-size;
+    }
+    .legal {
+        width: 100%;
+        @include transform(rotate(0deg));
+        position: absolute;
+        text-align: center;
+        bottom: -5em;
+        color: $white;
+        p {
+            display: block;
+        }
+        a {
+            &:link,
+            &:visited {
+                color: $white;
+            }
+            &:focus,
+            &:hover,
+            &:active
+            {
+                color: $black;
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 481px) {
+    .shout {
+        .line {
+            .space {
+                background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAYAAACp8Z5+AAAAHUlEQVQIW2OUk5PzefTo0RYGKGCEMTAEYCoxVAAASi0IBfJVuXQAAAAASUVORK5CYII=');
+            }
+        }
+    }
+}

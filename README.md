@@ -1,4 +1,4 @@
 xdsla
 =====
 
-x days since last accident
+x days since last accident - http://edhenderson.github.com/xdsla/
