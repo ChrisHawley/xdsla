@@ -1,7 +1,7 @@
 $(function() {
 
     var last_accident = '01/29/2013'; //mm/dd/yyyy
-    var person = 'Dino'; //mm/dd/yyyy
+    var person = 'Dino';
     
     var days = days_between_today(last_accident);
     $('#js-number-of-days-current-number').text(days);
@@ -11,7 +11,7 @@ $(function() {
 
 });
 
-function days_between_today(date) {
+function days_between_today (date) {
 
     // The number of milliseconds in one day
     var ONE_DAY = 1000 * 60 * 60 * 24;
@@ -23,5 +23,5 @@ function days_between_today(date) {
     var difference_ms = Math.abs(today_ms - d_ms);
 
     // Convert back to days and return
-    return Math.round(difference_ms/ONE_DAY);
+    return Math.floor(difference_ms/ONE_DAY) - 1;
 }
