@@ -24,11 +24,6 @@ $font-family-cursive: "Merienda One", cursive;
     @include border-radius($i * 0.5);
 }
 
-@mixin rgba-colour($colour, $alpha) {
-    color: $colour;
-    color: rgba($colour, $alpha);
-}
-
 /* style */
 
 * {
@@ -105,7 +100,7 @@ body {
                     @include transform(rotate(2deg));
                 }
                 &.handwritten-name {
-                    @include transform(rotate(-2deg));
+                    @include transform(rotate(-4deg));
                 }
             }
         }
@@ -267,7 +262,7 @@ hr {
     .shout {
         .line {
             .space {
-                background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAYAAACp8Z5+AAAAHUlEQVQIW2OUk5PzefTo0RYGKGCEMTAEYCoxVAAASi0IBfJVuXQAAAAASUVORK5CYII=');
+                background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAYAAACp8Z5+AAAAHUlEQVQIW2OUk5PzefTo0RYGKGCEMTAEYCoxVAAASi0IBfJVuXQAAAAASUVORK5CYII=");
             }
         }
     }
