@@ -9,15 +9,11 @@ $black: #201f1e;
 $white: #fff;
 $dirty: #efefef;
 $green: #229260;
-$pink: #e06;
+$pinky: #e06;
 $brass: #b5a642;
 
 $font-family-sans-serif: "Source Sans Pro", Arial, sans-serif;
 $font-family-cursive: "Merienda One", cursive;
-
-/* functions */
-
-/* blankety-blank */
 
 /* mixins */
 
@@ -40,7 +36,7 @@ $font-family-cursive: "Merienda One", cursive;
 }
 
 html {
-    background: $pink;
+    background: $pinky;
     color: $white;
     font-family: $font-family-sans-serif;
 }
