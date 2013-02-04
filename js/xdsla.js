@@ -1,7 +1,7 @@
 var XDSLA = {
 
     ONE_DAY_MS: 86400000,
-    update_interval_ms: 3600000; // 1 hour
+    update_interval_ms: 3600000, // 1 hour
     last_accident: '01/29/2013',
     blame_person: 'Dino',
 
