@@ -6,12 +6,20 @@ var XDSLA = {
     blame_person: 'Dino',
 
     init: function() {
+        XDSLA.update_dashboard();
         XDSLA.start_interval();
     },
 
     start_interval: function() {
-        XDSLA.update_dashboard();
         var interval_id = setInterval(XDSLA.update_dashboard, XDSLA.update_interval_ms);
+    },
+
+    update_dashboard: function() {
+        var days = XDSLA.today_day_difference(XDSLA.last_accident);
+        $('#js-number-of-days-current-number').text(days);
+        $('#js-number-of-days-current-units').text((days == 1) ? 'day' : 'days');
+        $('#js-person-to-blame').text(XDSLA.blame_person);
+        $('.shout').bigtext();
     },
 
     today_day_difference: function (accident_date_string) {
@@ -33,14 +41,6 @@ var XDSLA = {
         }
 
         return return_value;
-    },
-
-    update_dashboard: function() {
-        var days = XDSLA.today_day_difference(XDSLA.last_accident);
-        $('#js-number-of-days-current-number').text(days);
-        $('#js-number-of-days-current-units').text((days == 1) ? 'day' : 'days');
-        $('#js-person-to-blame').text(XDSLA.blame_person);
-        $('.shout').bigtext();
     }
 
 };
